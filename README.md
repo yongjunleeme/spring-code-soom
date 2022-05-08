@@ -22,7 +22,7 @@
 
 ### http
 - [http의 기본 포트가 80, https의 기본 포트가 443인 이유는 무엇일까?](https://johngrib.github.io/wiki/why-http-80-https-443/)
-- [상태코드별 Reason-Phrase]([https://datatracker.ietf.org/doc/html/rfc7231#section-6.1](https://datatracker.ietf.org/doc/html/rfc7231#section-6.1))
+- [상태코드별 Reason-Phrase](https://datatracker.ietf.org/doc/html/rfc7231#section-6.1)
 
 ### git
 - [파일 마지막에 자동으로 1개의 개행 문자 추가하기](https://johngrib.github.io/wiki/intellij/#%ED%8C%8C%EC%9D%BC-%EB%A7%88%EC%A7%80%EB%A7%89%EC%97%90-%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C-1%EA%B0%9C%EC%9D%98-%EA%B0%9C%ED%96%89-%EB%AC%B8%EC%9E%90-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0)
