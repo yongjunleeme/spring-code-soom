@@ -82,9 +82,10 @@ Java 언어를 만든 사람들이 주석을 어떻게 남겼는지 공부하면
 
 > 커밋 메세지를 먼저 적고 작업해보세요.
 
-## Sources
+## Sources  
+  
+- [코드숨 스프링](https://www.codesoom.com/courses/spring)  
+- [코드숨 트레이너 기계인간님 John Grib](https://johngrib.github.io/)  
+- [코드숨 트레이너 아샬님](https://www.youtube.com/channel/UCLLncfeIYljE0o_yUw7MkcA)  
+- [코드숨 트레이너 한윤석님](https://hannut91.github.io/)
 
-- [코드숨 스프링](https://www.codesoom.com/courses/spring)
-- [기계인간님 John Grib](https://johngrib.github.io/)
-- [아샬님](https://www.youtube.com/channel/UCLLncfeIYljE0o_yUw7MkcA)
-- [윤석님](https://hannut91.github.io/)
