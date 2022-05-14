@@ -21,9 +21,9 @@
 > 다른 분들 과제 리뷰 코멘트도 참고하여 포함했습니다..
 
 ### CORS
-1. 데이터 흐름을 다음과 같이 보는건 어떠신가요? 클라이언트(브라우저) <-> 서버(API 서버)
-2. 모든 클라이언트가 교차출처 검증 책임이 있지 않습니다. 브라우저와 달리 포스트맨은 교차출처 검증을 안합니다. 그래서 CORS 처리를 안해도 포스트맨을 통해서 서버에 요청을 하면 CORS 이슈가 발생하지 않습니다~
-3. Origin은 Scheme, Host, Port가 같아야 같은 origin으로 인식합니다. 예를 들어, 서버의 origin이 [http://localhost/:8080이고](http://localhost/:8080%EC%9D%B4%EA%B3%A0 "http://localhost/:8080이고") 클라이언트의 origin이 [http://localhost/:3000이면](http://localhost/:3000%EC%9D%B4%EB%A9%B4 "http://localhost/:3000이면") 포트 번호가 달라서 서로 다른 origin으로 인식합니다. 참고로 scheme은 http를 가리킵니다
+> 1. 데이터 흐름을 다음과 같이 보는건 어떠신가요? 클라이언트(브라우저) <-> 서버(API 서버)
+> 2. 모든 클라이언트가 교차출처 검증 책임이 있지 않습니다. 브라우저와 달리 포스트맨은 교차출처 검증을 안합니다. 그래서 CORS 처리를 안해도 포스트맨을 통해서 서버에 요청을 하면 CORS 이슈가 발생하지 않습니다~
+> 3. Origin은 Scheme, Host, Port가 같아야 같은 origin으로 인식합니다. 예를 들어, 서버의 origin이 [http://localhost/:8080이고](http://localhost/:8080%EC%9D%B4%EA%B3%A0 "http://localhost/:8080이고") 클라이언트의 origin이 [http://localhost/:3000이면](http://localhost/:3000%EC%9D%B4%EB%A9%B4 "http://localhost/:3000이면") 포트 번호가 달라서 서로 다른 origin으로 인식합니다. 참고로 scheme은 http를 가리킵니다
  
 ### 상태불변 객체
 > `final` 로 바꾸는 것을 시도해보면 좋겠어요!
@@ -60,15 +60,15 @@ public List<Task> getTasks() {
 
 ### Controller Pattern
 
-id로 task를 조회하고, task가 비어있는 경우, response 객체로 404 응답을 가져오고, 빈 문자열을 리턴해주고 있어요.
+> id로 task를 조회하고, task가 비어있는 경우, response 객체로 404 응답을 가져오고, 빈 문자열을 리턴해주고 있어요.
 
-컨트롤러에선 직접 일을 수행하지 않고, 서비스 혹은 비즈니스 로직에 작업을 위임하도록 합니다.  
-컨트롤러는 왜 이렇게 계층을 나눠서 작업해야 하는 걸까요?  
-이에 대해 자세히 정리하고 싶다면, 아래의 종립님의 블로그를 참조하시면 도움이 될 거예요.
+> 컨트롤러에선 직접 일을 수행하지 않고, 서비스 혹은 비즈니스 로직에 작업을 위임하도록 합니다.  
+> 컨트롤러는 왜 이렇게 계층을 나눠서 작업해야 하는 걸까요?  
+> 이에 대해 자세히 정리하고 싶다면, 아래의 종립님의 블로그를 참조하시면 도움이 될 거예요.
 
-우선은, `Task` 객체가 하는 일을 TaskController 에서 분리를 시도해보세요.
+> 우선은, `Task` 객체가 하는 일을 TaskController 에서 분리를 시도해보세요.
 
--   [컨트롤러 패턴 (Controller Pattern)](https://johngrib.github.io/wiki/pattern/controller/)
+> - [컨트롤러 패턴 (Controller Pattern)](https://johngrib.github.io/wiki/pattern/controller/)
 
 
 ### 조회한 값으로 수정한다면 하나의 트랜잭션으로
@@ -82,7 +82,6 @@ Task newTask = new Task(sequence.getAndIncrement(), source.getTitle());
 ```
 
 > 너무 좋아요! 기억하세요! 조회한 값으로 수정을 한다면 조회와 수정이 하나의 트랜잭션으로 일어나야 합니다!
-
 
 ### ETC
 
