@@ -1,34 +1,36 @@
 package com.codesoom.assignment.controllers;
 
-import com.codesoom.assignment.TaskNotFoundException;
+import com.codesoom.assignment.application.TaskService;
 import com.codesoom.assignment.models.Task;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/tasks")
 @CrossOrigin
 public class TaskController {
-    private List<Task> tasks = new ArrayList<>();
-    private Long newId = 0L;
+
+    private TaskService taskService;
+
+    public TaskController() {
+        taskService = new TaskService();
+    }
 
     @GetMapping
     public List<Task> List() {
-        return tasks;
+        return taskService.getTasks();
     }
 
     @PostMapping
     public Task create(@RequestBody Task task) {
-        task.setId(generateID());
-        tasks.add(task);
-        return task;
+        return taskService.createTask(task);
     }
 
     @GetMapping("{id}")
     public Task detail(@PathVariable Long id) {
-        return findTask(id);
+        return taskService.getTask(id);
     }
 
     @PatchMapping("{id}")
@@ -36,27 +38,12 @@ public class TaskController {
             @PathVariable Long id,
             @RequestBody Task source
     ) {
-        Task task = findTask(id);
-        task.setTitle(source.getTitle());
-
-        return task;
+        return taskService.updateTask(id, source);
     }
 
     @DeleteMapping("{id}")
-    public Task delete(@PathVariable Long id) {
-        return findTask(id);
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id) {
+        taskService.deleteTask(id);
     }
-
-    private Task findTask(Long id) {
-        return tasks.stream()
-                .filter(task -> task.getId().equals(id))
-                .findFirst()
-                .orElseThrow(() -> new TaskNotFoundException(id));
-    }
-
-    private Long generateID() {
-        newId += 1;
-        return newId;
-    }
-
 }
