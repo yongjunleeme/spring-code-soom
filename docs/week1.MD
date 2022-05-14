@@ -71,9 +71,10 @@ String[] split = Objects.requireNonNull(path, "path가 null이면 안됩니다")
 > `STATUS_NOT_FOUND` 와 `Not found`의 관계를 이렇게 표현하는 것은 아쉬운 일입니다.
 > (Test에서) 다음번에는 `@DisplayName`을 활용해 보도록 합시다.
 
-## Sources
+## Sources  
+  
+- [코드숨 스프링](https://www.codesoom.com/courses/spring)  
+- [코드숨 트레이너 기계인간님 John Grib](https://johngrib.github.io/)  
+- [코드숨 트레이너 아샬님](https://www.youtube.com/channel/UCLLncfeIYljE0o_yUw7MkcA)  
+- [코드숨 트레이너 한윤석님](https://hannut91.github.io/)
 
-- [코드숨 스프링](https://www.codesoom.com/courses/spring)
-- [기계인간님 John Grib](https://johngrib.github.io/)
-- [아샬님](https://www.youtube.com/channel/UCLLncfeIYljE0o_yUw7MkcA)
-- [윤석님](https://hannut91.github.io/)

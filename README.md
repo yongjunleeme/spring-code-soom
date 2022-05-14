@@ -1,7 +1,7 @@
 ## Goal
 - [자바공화국](https://jojoldu.tistory.com/609) 시민이 되어보자.
 - 코딩친구 만들기
-  - 나이 먹고 시작해서 그런가, 성격 탓인가. 코딩친구가 없는데(~~사실 친구도 없음~~) 자바지기 박재성님에 따르면 코딩친구가 성장에 핵심 중 하나라고 한다.
+  - 나이 먹고 시작해서 그런가, 성격 탓인가. 코딩친구가 없는데(~~사실 친구도 없음~~) 자바지기 박재성님에 따르면 코딩친구가 성장 핵심 중 하나라고 한다.
 
 ## 커리큘럼
 
@@ -22,7 +22,7 @@
 
 ### http
 - [http의 기본 포트가 80, https의 기본 포트가 443인 이유는 무엇일까?](https://johngrib.github.io/wiki/why-http-80-https-443/)
-- [상태코드별 Reason-Phrase]([https://datatracker.ietf.org/doc/html/rfc7231#section-6.1](https://datatracker.ietf.org/doc/html/rfc7231#section-6.1))
+- [상태코드별 Reason-Phrase](https://datatracker.ietf.org/doc/html/rfc7231#section-6.1)
 
 ### git
 - [파일 마지막에 자동으로 1개의 개행 문자 추가하기](https://johngrib.github.io/wiki/intellij/#%ED%8C%8C%EC%9D%BC-%EB%A7%88%EC%A7%80%EB%A7%89%EC%97%90-%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C-1%EA%B0%9C%EC%9D%98-%EA%B0%9C%ED%96%89-%EB%AC%B8%EC%9E%90-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0)
@@ -82,9 +82,10 @@ Java 언어를 만든 사람들이 주석을 어떻게 남겼는지 공부하면
 
 > 커밋 메세지를 먼저 적고 작업해보세요.
 
-## Sources
+## Sources  
+  
+- [코드숨 스프링](https://www.codesoom.com/courses/spring)  
+- [코드숨 트레이너 기계인간님 John Grib](https://johngrib.github.io/)  
+- [코드숨 트레이너 아샬님](https://www.youtube.com/channel/UCLLncfeIYljE0o_yUw7MkcA)  
+- [코드숨 트레이너 한윤석님](https://hannut91.github.io/)
 
-- [코드숨 스프링](https://www.codesoom.com/courses/spring)
-- [기계인간님 John Grib](https://johngrib.github.io/)
-- [아샬님](https://www.youtube.com/channel/UCLLncfeIYljE0o_yUw7MkcA)
-- [윤석님](https://hannut91.github.io/)
