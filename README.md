@@ -8,6 +8,7 @@
 - [0주차](docs/week0.MD)
 - [1주차 - 웹 개발 시작하기](docs/week1.MD)
 - [2주차 - Spring Web](docs/week2.MD)
+- [3주차 - Test](docs/week3.MD)
 
 ## 참고 링크
 
@@ -66,7 +67,6 @@ Java 언어를 만든 사람들이 주석을 어떻게 남겼는지 공부하면
 ### 공부방법
 
 >“늘 검색해서 보는 것 보다 이렇게 내가 만든 무언가를 직접 확인하는 것이 빠르게 몸으로 와닿는 경험을 했다.” 직접 체험하신 건 기억도 오래 지속될 거예요. 종종 “내가 뭘 했더라?”란 생각만 해도 장기기억으로 금방 넘어갈 겁니다. 학습 과정을 단순 공부가 아니라 실험이 되도록 설계해 보세요. 제가 자주 하는 말이 “엄청나게 많이 실험해 보세요”인데, 실험을 했냐 안 했냐 차이는 엄청납니다. 엄청 작은 프로그램을 자주 만들어 보세요. [https://github.com/ahastudio/CodingLife](https://github.com/ahastudio/CodingLife "https://github.com/ahastudio/CodingLife")
-
 
 ### 선택의 이유를 설명하는 습관  
   
