@@ -93,8 +93,47 @@ DTO 생성자 파라미터에 엔티티를 그대로 넣은 방식은 설계상 
 
 > `TaskService`는 `TaskController`의 존재를 모르고 있다는 점을 고려해 주세요.
 
+> 맞아요! 멋진 책과 블로그가 우리에게 많은 도움을 주죠. 그리고 정리된 내용들을 읽으면 우리에게 무언가를 이해할 때 빠르게 해결 할 수 있어요!
+여기서 저는 블로그나 책을 보지말고 도큐먼트만 보세요! 라고 말할 수는 없어요!
+> 하지만 당연히 아시겠지만, 모든 기능은 시간이 지남에 따라 개선되고 변경되고 진화하지만 블로그와 책은 발간된 시간에서 멈춰있다는 것을요 ㅠㅜㅠㅜ
+> 아마 연차가 쌓이면서 자연스럽게 도큐먼트를 옮겨간다는 것은 연차가 쌓여서 '이제 도큐먼트를 읽을 만큼의 실력이 쌓였어!' 가 아니라 '결국 도큐먼트, 공식문서가 가장 유효한 글이구나...' 라는 경험이 쌓이면서 도큐먼트를 읽게되는 것 같아요 ㅠㅜㅠㅜ
+> 빠르게 더 먼저 빠르게 읽어보는 것이 좋습니다. 하지만 도큐먼트가 별로인 프로젝트도 있어요. 그런 곳은 오히려 블로그가 도움이 되기도합니다.
+
+> 읽어보신 도큐먼트를 잠깐보자면 readOnly 정보에 아래와 같은 글이 있습니다.
+> This just serves as a hint for the actual transaction subsystem; it will not necessarily cause failure of write access attempts. A transaction manager which cannot interpret the read-only hint will not throw an exception when asked for a read-only transaction but rather silently ignore the hint.
+
+> 여기서 우리가 알아야할 점은 그저 힌트만 준다는 것입니다.
+쓰기를 수행할 때 실패할 수도 있다. (실제로 Mysql은 예외를 던집니다. 그것을 테스트에 추가할 수도 있죠) H2 구현체는 이 힌트를 무시하고 있습니다.
+
+```java
+/**
+* According to the JDBC specs, this setting is only a hint to the database
+* to enable optimizations - it does not cause writes to be prohibited.
+*
+* @param readOnly ignored
+* @throws SQLException if the connection is closed
+*/
+@Override
+public void setReadOnly(boolean readOnly) throws SQLException {
+  try {
+  if (isDebugEnabled()) {
+      debugCode("setReadOnly(" + readOnly + ");");
+  }
+  checkClosed();
+  } catch (Exception e) {
+  throw logAndConvert(e);
+  }
+}
+```
+
+> H2 구현체 주석에도 나오듯이
+JDBC 스펙에 따르면, readOnly는 그저 최적화를 위한 힌트일 뿐이다. 또한 readOnly는 쓰기가 금지되는 것되는 것도 아니다.
+
+> 주석아래 @param readOnly ignored 를 보면 readOnly는 무시된다는 것을 알 수 있습니다.
+
 
 ## Sources  
   
 - [코드숨 스프링](https://www.codesoom.com/courses/spring)  
 - [코드숨 트레이너 기계인간님 John Grib](https://johngrib.github.io/)  
+- [코드숨 트레이너 남영환님](https://github.com/ssisksl77)
