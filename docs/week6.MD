@@ -19,6 +19,8 @@ JWT를 몇 번째 접하는데도 개념이 아리송하다. 하지만 당장의
 
 ## Review Comment
 
+> 다른 수강생분들이 받으신 코멘트도 추가했습니다.
+
 > [JWT에 대해 학습하고 JWT을 도입한다고 가정하고 글을 작성해보았습니다.](https://github.com/CodeSoom/spring-week6-assignment-1/pull/2#issuecomment-791187665)
 
 > `@FunctionalInterface`를 왜 붙이는지에 대해서는 저도 이번 기회에 깊이 있게 생각해 봐야겠어요. 다음은 제가 최근에 정리해 둔 글입니다.  
