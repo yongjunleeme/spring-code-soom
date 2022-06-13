@@ -26,6 +26,55 @@ JWT를 몇 번째 접하는데도 개념이 아리송하다. 하지만 당장의
 
 > JavaDoc은 주석이지만 열심히 작성하다 보면 놀라운 깨달음을 얻을 수 있습니다. 그리고 그 깨달음은 객체지향 핵심 원리와 닿아 있고, 팀 플레이어로서의 자신을 성장시키는 데에도 큰 도움이 됩니다.
 
+> Transactional 이 필요한 이유가 무엇인가요?
+
+login 시 트랜잭션의 속성인 [ACID](https://ko.wikipedia.org/wiki/ACID) 을 보장하기 위해서는 `@Tansactional`이 필요한 게 아닌가 합니다.
+
+또한 직접 구현하려면 여러 고려사항을 따져야 하지만 `@Tansactional`을 선언하면 AOP는 프록시를 동적으로 만들어서 스프링 컨테이너에 등록하는 일련의 과정을 수행할 수 있기 때문입니다. 
+
+그런데 트랜잭션 격리수준에 따라 아래의 각 문제가 발생할 여지가 있습니다. 격리수준은 데이터베이스마다 다른데 보통 READ COMMITTED를 기본으로 사용합니다. 과제에서 사용한 [H2의 트랜잭션 격리설정](https://h2database.com/html/advanced.html#transaction_isolation)에서 디폴트 설정이 무엇인지는 잘 모르겠습니다.. ㅠ,ㅠ 
+
+## 트랜잭션 격리수준
+
+- READ UNCOMMITED
+
+커밋하지 않은 데이터를 읽을 수 있다. 예를 들어 트랜잭션1이 데이터를 수정하고 있는데 커밋하지 않아도 트랜잭션 2가 수정 중인 데이터를 조회할 수 있다. 이를 Dirty read라고 한다. 트랜잭션 2가 Dirty read한 데이터를 사용하는데 트랜잭션1을 롤백하면 테이터 정합성에 문제가 발생할 수 있다.
+
+- READ COMMITTED
+
+커밋한 데이터만 읽을 수 있다. 따라서 Dirty READ가 발생하지 않는다. 하지만 Non-Repeatable read는 발생할 수 있다. 예를 들어 트랜잭션 1이 회원 A를 조회 중인데 갑자기 트랜잭션 2가 회원 A를 수정하고 커밋하면 트랜잭션 1이 다시 회원 A를 조회했을 때 수정된 데이터가 조회된다. 이처럼 반복해서 같은 데이터를 읽을 수 있는 상태를 Non-Repeatable read라 한다.
+
+- REPEATABLE READ
+
+한 번 조회한 데이터를 반복해서 조회해도 같은 데이터가 조회된다. 하지만 Phantom read는 발생할 수 있다. 예를 들어 트랜잭션1이 10살 이하의 회원을 조회했는데 트랜잭션 2가 5살 회원을 추가하고 커밋하면 트랜잭션 1이 다시 10살 이하의 회원을 조회했을 때 회원 하나가 추가된 상태로 조회된다. 이처럼 반복 조회 시 결과 집합이 달라지는 것을Phantom read라고 한다.
+
+- SERIALZABLE
+
+가장 엄격한 트랜잭션 격리 수준이다. 하지만 동시성 처리 성능이 급격히 떨어질 수 있다.
+
+## 출처
+- [스프링 DB 1편 - 데이터 접근 핵심 원리](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-db-1/dashboard)
+- [스프링 DB 2편 - 데이터 접근 활용 기술](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-db-2?inst=260d2a39)
+- [자바 ORM 표준 JPA 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788960777330)
+
+
+### apache commons lang
+
+```java
+if (Strings.isBlank(token) {
+	// ...
+}
+```
+
+> nit : 항상 하는 널체크가 귀찮다면 이렇게 하는 것도 좋겠습니다!  
+대표적인 문자열 관련 유틸모임은 apache commons lang 을 전통적으로 많이 사용합니다.  
+위 예시는 log4j에 구현체가 있길래 보여드린 예시입니다.
+
+
+- nit가 nitpicking(중요하지 않지만 작은 변화)을 의미하는군요!
+- [log4j](https://ko.wikipedia.org/wiki/Log4j) (아파치 로깅 유틸리티)
+- [Apache Commons](https://commons.apache.org/proper/commons-lang/)
+
 ## Sources    
     
 - [코드숨 스프링](https://www.codesoom.com/courses/spring)    
