@@ -7,7 +7,7 @@
 - [4주차 - Domain](docs/week4.MD)
 - [5주차 - 유효성 검사](docs/week5.MD)
 - [6주차 - 로그인](docs/week6.MD)
-- [7주차 - 스프링 시큐리티](docs/week7.MD)
+- [7주차 - 보안](docs/week7.MD)
 
  ## 체크 리스트
 
@@ -24,7 +24,7 @@
 
 ### http
 - [http의 기본 포트가 80, https의 기본 포트가 443인 이유는 무엇일까?](https://johngrib.github.io/wiki/why-http-80-https-443/)
-- [상태코드별 Reason-Phrase]([https://datatracker.ietf.org/doc/html/rfc7231#section-6.1](https://datatracker.ietf.org/doc/html/rfc7231#section-6.1))
+- [상태코드별 Reason-Phrase](https://datatracker.ietf.org/doc/html/rfc7231#section-6.1)
 - [RFC 5424](https://datatracker.ietf.org/doc/html/rfc5424): logger를 정의했는데 읽어보라고 하심
 
 ### git
