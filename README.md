@@ -1,9 +1,4 @@
-## Goal
-- [자바공화국](https://jojoldu.tistory.com/609) 시민이 되어보자.
-- 코딩친구 만들기
-  - 나이 먹고 시작해서 그런가, 성격 탓인가. 코딩친구가 없는데(~~사실 친구도 없음~~) 자바지기 박재성님에 따르면 코딩친구가 성장 핵심 중 하나라고 한다.
-
-## 커리큘럼
+## 회고 
 
 - [0주차](docs/week0.MD)
 - [1주차 - 웹 개발 시작하기](docs/week1.MD)
@@ -12,23 +7,35 @@
 - [4주차 - Domain](docs/week4.MD)
 - [5주차 - 유효성 검사](docs/week5.MD)
 - [6주차 - 로그인](docs/week6.MD)
+- [7주차 - 스프링 시큐리티](docs/week7.MD)
+
+ ## 체크 리스트
+
+- 영상강의 학습에 인출을 사용하고 있는가
+- 책을 읽을 때 다양한 인출방법을 시도해보고 있는가
+- 1시간 단위로 의도적인 몰입을 격리해 상태 점검을 하고 있는가
+- 이펙티브 자바의 추상적 개념을 학습하고 다양한 상황에 적용하고 있는가
+- 프린트만 찍는 디버깅 스킬이 이외에 다른 방법을 축적하고 있는가
 
 ## 참고 링크
 
 ### java
-
-- [Static 대신 객체 사용하기 #1](https://www.youtube.com/watch?v=qRZL2NkXRdo&ab_channel=%EC%BD%94%EB%94%A9%EC%9D%98%EC%8B%A0%EC%95%84%EC%83%AC)
+- [Mockito 한글 번역](https://github.com/mockito/mockito/wiki/Mockito-features-in-Korean)
 
 ### http
 - [http의 기본 포트가 80, https의 기본 포트가 443인 이유는 무엇일까?](https://johngrib.github.io/wiki/why-http-80-https-443/)
-- [상태코드별 Reason-Phrase](https://datatracker.ietf.org/doc/html/rfc7231#section-6.1)
+- [상태코드별 Reason-Phrase]([https://datatracker.ietf.org/doc/html/rfc7231#section-6.1](https://datatracker.ietf.org/doc/html/rfc7231#section-6.1))
+- [RFC 5424](https://datatracker.ietf.org/doc/html/rfc5424): logger를 정의했는데 읽어보라고 하심
 
 ### git
 - [파일 마지막에 자동으로 1개의 개행 문자 추가하기](https://johngrib.github.io/wiki/intellij/#%ED%8C%8C%EC%9D%BC-%EB%A7%88%EC%A7%80%EB%A7%89%EC%97%90-%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C-1%EA%B0%9C%EC%9D%98-%EA%B0%9C%ED%96%89-%EB%AC%B8%EC%9E%90-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0)
+- [Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)
+- [Udacity Git Commit Message Style Guide](https://udacity.github.io/git-styleguide/)
+- [Git Commit Good Practice](https://wiki.openstack.org/wiki/GitCommitMessages#Example_1_4)
 
-### etc
-- [Three Fs](https://github.com/ahastudio/til/blob/main/retrospective/three-fs.md)
-- [j 언어](https://github.com/ahastudio/til/tree/main/j)
+### etc 
+- [테스트 디렉토리 설정](https://es2sun.tistory.com/m/216)
+
 
 ## 조언  
 ### 책 처음 받아볼 때 끝까지 훑어보기  
@@ -51,9 +58,7 @@
 중요한 것부터 하나라도 확실히 읽으며 가면 됩니다.  
   
   
-### 가능하면 new를 최소화
-
-> 가능한 한 new를 최소화하는 것이 스프링의 장점을 최대화하는 것이라고 생각하고 코드 디자인을 하는 것이 중요해요  
+### 가능하면 new를 최소화 > 가능한 한 new를 최소화하는 것이 스프링의 장점을 최대화하는 것이라고 생각하고 코드 디자인을 하는 것이 중요해요  
   
 ### 주석을 잘 다는 법  
   
@@ -73,6 +78,7 @@ Java 언어를 만든 사람들이 주석을 어떻게 남겼는지 공부하면
 
 >“늘 검색해서 보는 것 보다 이렇게 내가 만든 무언가를 직접 확인하는 것이 빠르게 몸으로 와닿는 경험을 했다.” 직접 체험하신 건 기억도 오래 지속될 거예요. 종종 “내가 뭘 했더라?”란 생각만 해도 장기기억으로 금방 넘어갈 겁니다. 학습 과정을 단순 공부가 아니라 실험이 되도록 설계해 보세요. 제가 자주 하는 말이 “엄청나게 많이 실험해 보세요”인데, 실험을 했냐 안 했냐 차이는 엄청납니다. 엄청 작은 프로그램을 자주 만들어 보세요. [https://github.com/ahastudio/CodingLife](https://github.com/ahastudio/CodingLife "https://github.com/ahastudio/CodingLife")
 
+
 ### 선택의 이유를 설명하는 습관  
   
 > 잘 하셨습니다. 여기에서 잘 하셨다고 말씀드린 것은 이름을 잘 선택했다는 뜻이 아닙니다. (여기에서 Changer가 나은지 Updater가 나은지보다 더 중요한 이야기입니다) 결정의 의미를 설명하신 것이 잘 하신 거에요. 앞으로도 선택의 이유를 설명하는 습관을 계속 키워가 보세요. 자신의 코드를 습관적으로 설명하다 보면 코딩할 때에도 코드의 이유를 계속 생각하시면서 작업하시게 될 겁니다.  
@@ -82,18 +88,46 @@ Java 언어를 만든 사람들이 주석을 어떻게 남겼는지 공부하면
 ### PR 작성법  
 > PR 본문은 이렇게 작성해 보세요. `what` - `why` - `how` 를 떠올리며 작성하는 것입니다.  
   
+
+### vim으로 인텔리제이와 비슷한 환경을 어떻게 구성 할 수 있나요?
+
+> 인텔리제이가 뭘 어떻게 했는지를 열심히 생각하면서 해야겠죠?
+인텔리제이가 하늘에서 뚝 떨어진 게 아니잖아용. 누군가 열심히 이거저거 긁어모아서 만들었겠죠.
+컴퓨터를 통해 우리가 하는 많은 일이 프랙탈 구조를 갖고 있죠. 이게 개발 환경 구성하는 일에서도 비슷하다고 생각해요.
+코드숨 스프링 과정을 들어보면 초기에 /tasks/123 같은 걸 파싱하는 서브 과제가 주어지는데요
+이게 별 거 아닌 일 같지만 문자열 파싱이라는 아주 큼지막한 주제로 진입해 생각할 수 있는 좋은 과제이기도 합니다.
+이와 비슷하게 개발환경을 IDE 없이 구성해보는 건 (남들에게 권하기는 곤란한 주제이긴 하지만)
+이걸 하면서 결국엔 개인에게 최적화된 사용 경험과 일반 다수의 설정 편의를 어느 정도로 트레이드 오프 하느냐의 문제이기도 했어요.
+그래서 IDE 없이 Vim으로 뭘 구성해보는 건 썩 괜찮고 쓸만하지만 매니악한 소프트웨어 하나를 만드는 일과 비슷한 경험이라고도 할 수 있을 거 같습니다.
+정반대로 IntelliJ 처럼 많은 사람들이 어려움 없이 편리하게 사용하는 애플리케이션에 대해서도 많이 생각하게 됐고요.   
+
+
 ### ETC  
   
 > 커밋 메세지를 먼저 적고 작업해보세요.  
 
+---
+
 > List 혹은 Collection을 사용해야하는 목적과 다른 사람이 추론하기 쉽게하기 위함이군요.
 > 코드는 한 번 쓰고 여러번 읽으니까요.
+
+---
 
 > [포스텔의 법칙](https://johngrib.github.io/wiki/Postel-s-law/)
 > 그런데 한편 이 관대함을 끝까지 밀어놓고 보면 또 다른 것이 보입니다. shell script 의 매력.    
 > 셸 스크립트는 문자열 리스트를 받아서 문자열 리스트를 리턴하죠.
 > 셸 명령 하나하나는 문자열 하나만 받아서 스스로를 방어하고, 스스로 파싱하고, 스스로 검증하고, 문자열 하나를 내놓는 셈입니다.
 > 셸 명령들에 재미가 붙으면 타입이 하나 있는 언어의 매력이 이런 것인가! 하는 느낌도 받게 됩니다.
+   
+---
+
+> AST 구현 연습하기 제일 적절한 난이도의 과제는 역시 JSON 일 거에요. JSON 으로 한번 해보세요.
+연산자 우선순위같은 귀찮은 서브 과제도 없죠.
+처음부터 JSON의 모든 타입을 지원하는 게 아니라 처음엔 객체와 스트링만 지원하는 JSON 파서를 만드는 겁니다.
+그러면 콤마, 쌍따옴표, 중괄호를 인식하게 만들고 재귀하게 만들면 그만이죠.
+그리고 정수 추가하고, 실수 추가하고, 배열 추가하고...
+
+---
 
 ## Sources  
   
