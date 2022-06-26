@@ -1,15 +1,15 @@
-## 회고 
+## 회고   
+- [0주차](docs/week0.MD)  
+- [1주차 - 웹 개발 시작하기](docs/week1.MD)  
+- [2주차 - Spring Web](docs/week2.MD)  
+- [3주차 - Test](docs/week3.MD)  
+- [4주차 - Domain](docs/week4.MD)  
+- [5주차 - 유효성 검사](docs/week5.MD)  
+- [6주차 - 로그인](docs/week6.MD)  
+- [7주차 - 보안](docs/week7.MD)  
+- [8주차 - 더 나아가기](docs/week8.MD)
 
-- [0주차](docs/week0.MD)
-- [1주차 - 웹 개발 시작하기](docs/week1.MD)
-- [2주차 - Spring Web](docs/week2.MD)
-- [3주차 - Test](docs/week3.MD)
-- [4주차 - Domain](docs/week4.MD)
-- [5주차 - 유효성 검사](docs/week5.MD)
-- [6주차 - 로그인](docs/week6.MD)
-- [7주차 - 보안](docs/week7.MD)
-
- ## 체크 리스트
+## 체크 리스트
 
 - 영상강의 학습에 인출을 사용하고 있는가
 - 책을 읽을 때 다양한 인출방법을 시도해보고 있는가
@@ -22,9 +22,10 @@
 ### java
 - [Mockito 한글 번역](https://github.com/mockito/mockito/wiki/Mockito-features-in-Korean)
 
+
 ### http
 - [http의 기본 포트가 80, https의 기본 포트가 443인 이유는 무엇일까?](https://johngrib.github.io/wiki/why-http-80-https-443/)
-- [상태코드별 Reason-Phrase](https://datatracker.ietf.org/doc/html/rfc7231#section-6.1)
+- [상태코드별 Reason-Phrase]([https://datatracker.ietf.org/doc/html/rfc7231#section-6.1](https://datatracker.ietf.org/doc/html/rfc7231#section-6.1))
 - [RFC 5424](https://datatracker.ietf.org/doc/html/rfc5424): logger를 정의했는데 읽어보라고 하심
 
 ### git
@@ -35,6 +36,12 @@
 
 ### etc 
 - [테스트 디렉토리 설정](https://es2sun.tistory.com/m/216)
+
+## 타 수강생님 회고
+
+- [코드숨 2주차 과정 회고 -  
+Jinu Noh님](https://yesjinu.fly.dev/codesoom-2nd-week-retrospect/)
+
 
 
 ## 조언  
@@ -132,7 +139,7 @@ Java 언어를 만든 사람들이 주석을 어떻게 남겼는지 공부하면
 ## Sources  
   
 - [코드숨 스프링](https://www.codesoom.com/courses/spring)  
-- [코드숨 트레이너 기계인간님 John Grib](https://johngrib.github.io/)  
+- [코드숨 트레이너 John Grib님](https://johngrib.github.io/)  
 - [코드숨 트레이너 아샬님](https://www.youtube.com/channel/UCLLncfeIYljE0o_yUw7MkcA)  
 - [코드숨 트레이너 한윤석님](https://hannut91.github.io/)
  
