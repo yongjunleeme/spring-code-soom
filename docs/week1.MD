@@ -40,7 +40,7 @@ POST 메서드에서 몇 시간을 날려먹었는지 모르겠다. 결국 에�
 
 *다른 수강생분들이 받으신 리뷰도 포함했습니다**
 
-- [1주차](https://github.com/CodeSoom/spring-week1-assignment-1/pull/99
+- [1주차](https://github.com/CodeSoom/spring-week1-assignment-1/pull/99)
 
 ### 영상강의 학습방법
 
