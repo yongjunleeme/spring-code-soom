@@ -8,20 +8,12 @@
 - [7주차 - 보안](docs/week7.MD)  
 - [8주차 - 더 나아가기](docs/week8.MD)
 
-## 체크 리스트
-- 영상강의 학습에 인출을 사용하고 있는가
-- 책을 읽을 때 다양한 인출방법을 시도해보고 있는가
-- 1시간 단위로 의도적인 몰입을 격리해 상태 점검을 하고 있는가
-- 이펙티브 자바의 추상적 개념을 학습하고 다양한 상황에 적용하고 있는가
-- 프린트만 찍는 디버깅 스킬이 이외에 다른 방법을 축적하고 있는가
-
 ## [추가 학습, 오류 해결](docs/troubleShooting.MD)
 
 ## 참고 링크
 
 ### java
 - [Mockito 한글 번역](https://github.com/mockito/mockito/wiki/Mockito-features-in-Korean)
-
 
 ### http
 - [http의 기본 포트가 80, https의 기본 포트가 443인 이유는 무엇일까?](https://johngrib.github.io/wiki/why-http-80-https-443/)
